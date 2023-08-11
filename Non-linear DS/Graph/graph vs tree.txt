@@ -1,0 +1,14 @@
+
+Graph vs Tree
+========
+
+The basis of Comparison	Graph	Tree
+
+Definition : 	Graph is a non-linear data structure. 	       Tree is a non-linear data structure.
+Structure :	It is a collection of vertices/nodes and edges.  	It is a collection of nodes and edges.
+Edges :	Each node can have any number of edges.	                 If there is n nodes then there would be n-1 number of edges
+Types of Edges :	They can be directed or undirected	        They are always directed
+Root node :	There is no unique node called root in graph.     	There is a unique node called root(parent) node in trees.
+Loop Formation	: A cycle can be formed.                   	    There will not be any cycle.
+Traversal:	 For graph traversal, DFS/BFS.               	     We traverse a tree using in-order, pre-order, or post-order traversal methods.
+Applications : For finding shortest path in networking graph is used.	For game trees, decision trees, the tree is used.

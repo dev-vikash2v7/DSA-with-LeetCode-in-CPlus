@@ -1,0 +1,82 @@
+What is a Spanning Tree?
+==============
+A Spanning tree is a subset to a connected graph G, where all the edges are connected, 
+i.e, one can traverse to any edge from a particular edge with or without intermediates
+. Also, a spanning tree must not have any cycle in it. Thus we can say that if there are N vertices in a connected graph
+ then the no. of edges that a spanning tree may have is N-1.
+ or
+ A spanning tree is a subset of Graph G, which has all the vertices covered with minimum possible number of
+edges. Hence, a spanning tree does not have cycles and it cannot be disconnected.
+By this definition, we can draw a conclusion that every connected and undirected Graph G has at least one
+spanning tree. A disconnected graph does not have any spanning tree, as it cannot be spanned to all its
+vertices. 
+We found three spanning trees off one complete graph. A complete undirected graph can have maximum nn2
+ number of spanning trees, where n is the number of nodes. In the above addressed example, n is
+3, hence 3ϯ−Ϯ = 3spanning trees are possible. 
+------------
+
+What is a Minimum Spanning Tree? 
+===============
+
+Given a connected and undirected graph, a spanning tree of that graph is a subgraph that is a tree and connects
+ all the vertices together. A single graph can have many different spanning trees. 
+ 
+ A minimum spanning tree (MST)
+  or minimum weight spanning tree for a weighted, connected, undirected graph is a spanning tree with a weight less 
+  than or equal to the weight of every other spanning tree. The weight of a spanning tree is the sum of weights given 
+  to each edge of the spanning tree.
+
+or 
+
+In a weighted graph, a minimum spanning tree is a spanning tree that has minimum weight than all other
+spanning trees of the same graph. In real-world situations, this weight can be measured as distance,
+congestion, traffic load or any arbitrary value denoted to the edges.
+
+
+
+ How many edges does a minimum spanning tree has? 
+ -------------------
+A minimum spanning tree has (V – 1) edges where V is the number of vertices in the given graph. 
+
+
+What are the applications of the Minimum Spanning Tree? 
+======================
+
+1. Network design
+-------------
+telephone, electrical, hydraulic, TV cable, computer, road 
+The standard application is to a problem like phone network design
+. You have a business with several offices; you want to lease phone lines to connect them up with each other, and the phone
+ company charges different amounts of money to connect different pairs of cities
+ . You want a set of lines that connects all your offices with a minimum total cost
+ . It should be a spanning tree, since if a network isn’t a tree you can always remove some edges and save money. 
+
+!!!!!!!!
+
+2. Approximation algorithms for NP-hard problems
+-----------------
+
+traveling salesperson problem, Steiner tree 
+A less obvious application is that the minimum spanning tree can be used to approximately solve the traveling salesman problem
+. A convenient formal way of defining this problem is to find the shortest path that visits each point at least once. 
+
+
+!!!!!!!!!!!
+
+3. Indirect applications
+-----------------
+
+Max bottleneck paths 
+LDPC codes for error correction 
+Image registration with Renyi entropy 
+Learning salient features for real-time face verification 
+Reducing data storage in sequencing amino acids in a protein 
+Model locality of particle interactions in turbulent fluid flows 
+Autoconfig protocol for Ethernet bridging to avoid cycles in a network 
+
+
+!!!!!!!!!!!!!!!!
+
+4. Cluster analysis 
+---------------
+k clustering problem can be viewed as finding an MST and deleting the k-1 most expensive edges.

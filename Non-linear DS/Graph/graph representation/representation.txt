@@ -1,0 +1,76 @@
+# The following two are the most commonly used representations of a graph. 
+1. Adjacency Matrix 
+2. Adjacency List 
+
+Adjacency Matrix: 
+
+. Adjacency Matrix is a 2D array of size V x V where V is the number of vertices in a graph
+. Let the 2D array be adj[][], a slot adj[i][j] = 1 indicates that there is an edge from vertex i to vertex j
+. Adjacency matrix for undirected graph is always symmetric. Adjacency Matrix is also used to represent weighted graphs
+. If adj[i][j] = w, then there is an edge from vertex i to vertex j with weight w. 
+
+
+Pros: 
+. Representation is easier to implement and follow
+. Removing an edge takes O(1) time
+. Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1).
+
+Cons:
+. Consumes more space O(V^2). Even if the graph is sparse(contains less number of edges), it consumes the same space
+. Adding a vertex is O(V^2) time.  Computing all neighbors of a vertex takes O(V) time (Not efficient).
+
+
+
+# Adjacency List: 
+
+. An array of linked lists is used
+. The size of the array is equal to the number of vertices
+. Let the array be an array[]
+. An entry array[i] represents the linked list of vertices adjacent to the ith index
+. This representation can also be used to represent a weighted graph. The weights of edges can be represented as lists of pairs
+ 
+
+ 0----1\                   0 : 1 -> 4
+ |   /| \                  1 : 0 -> 4 -> 3 -> 2
+ |  / |   2 ------------>  2 : 1 -> 3
+ | /  | /                  3 : 1-> 2-> -> 4
+ 4----3/                   4 : 0 -> 1 -> 3
+
+Pros:
+. Saves space O(|V|+|E|)
+. In the worst case, there can be C(V, 2) number of edges in a graph thus consuming O(V^2) space
+. Adding a vertex is easier. Computing all neighbors of a vertex takes optimal time.
+
+Cons: 
+. Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
+. In Real-life problems,  graphs are sparse(|E| <<|V|2)
+. That’s why adjacency lists Data structure is commonly used for storing graphs
+. Adjacency matrix will enforce (|V|2) bound on time complexity for such algorithms. 
+
+
+
+Graph Representation:
+========
+
+Graph can be represented in the following ways:
+
+Set Representation: 
+      . Set representation of a graph involves two sets:
+      . Set of vertices V = {V1, V2, V3, V4} and set of edges E = {{V1, V2}, {V2, V3}, {V3, V4}, {V4, V1}}
+      . This representation is efficient for memory but does not allow parallel edges.
+
+Sequential Representation:
+      . This representation of a graph can be represented by means of matrices:
+      . Adjacency Matrix, Incidence matrix and Path matrix.
+
+        Adjacency Matrix: This matrix includes information about the adjacent nodes. Here, aij = 1 if there is an edge from Vi to Vj otherwise 0. It is a matrix of order V×V.
+        Incidence Matrix: This matrix includes information about the incidence of edges on the nodes. Here, aij = 1 if the jth edge Ej is incident on ith vertex Vi otherwise 0. It is a matrix of order V×E.
+        Path Matrix: This matrix includes information about the simple path between two vertices. Here, Pij = 1 if there is a path from Vi to Vj otherwise 0. It is also called as reachability matrix of graph G.  
+
+Linked Representation:
+      . This representation gives the information about the nodes to which a specific node is connected i.e. adjacency lists
+      . This representation gives the adjacency lists of the vertices with the help of array and linked lists
+      . In the adjacency lists, the vertices which are connected with the specific vertex are arranged in the form of lists which is connected to that vertex
+
+
+    

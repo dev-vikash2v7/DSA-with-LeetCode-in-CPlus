@@ -1,0 +1,70 @@
+4. Simple Graph:
+==========
+A simple graph is a graph that does not contain more than one edge between the pair of vertices
+. A simple railway track connecting different cities is an example of a simple graph. 
+
+Null Graph:
+========
+A graph of order n and size zero is a graph where there are only isolated vertices with no edges connecting any pair of vertices.
+
+
+Complete Graph:
+==========
+A simple graph with n vertices is called a complete graph if the degree of each vertex is n-1, that is, 
+one vertex is attached with n-1 edges or the rest of the vertices in the graph. A complete graph is also called Full Graph. 
+
+
+9. Regular Graph:
+============
+A simple graph is said to be regular if all vertices of graph G are of equal degree
+. All complete graphs are regular but vice versa is not possible. 
+
+
+12. Digraph Graph:
+==============
+A graph G = (V, E) with a mapping f such that every edge maps onto some ordered pair of vertices (Vi, Vj) are called a Digraph
+. It is also called Directed Graph. The ordered pair (Vi, Vj) means an edge between Vi and Vj with an arrow directed from Vi to Vj
+. Here in the figure: e1 = (V1, V2) e2 = (V2, V3) e4 = (V2, V4) 
+
+
+Connected or Disconnected Graph:
+===============
+. Graph G is said to be connected if any pair of vertices (Vi, Vj) of a graph G is reachable from one another
+. Or a graph is said to be connected if there exists at least one path between each and every pair of vertices in graph G, otherwise, it is disconnected. A null graph with n vertices is a disconnected graph consisting of n components
+. Each component consists of one vertex and no edge. 
+
+
+What is Directed Graph
+==========
+. When a graph has an ordered pair of vertexes, it is called a directed graph
+. The edges of the graph represent a specific direction from one vertex to another
+. When there is an edge representation as (V1, V2), the direction is from V1 to V2
+. The first element V1 is the initial node or the start vertex
+. The second element V2 is the terminal node or the end vertex.
+
+Set of vertices (V) – {A, B, C, D, E, F}
+Set of edges (E) – {(A,B),(B,C),(C,E),(E,D),(D,E),(E,F)}
+
+
+
+What is Undirected Graph
+============
+. When a graph has an unordered pair of vertexes, it is an undirected graph
+. In other words, there is no specific direction to represent the edges
+. The vertexes connect together by undirected arcs, which are edges without arrows
+. If there is an edge between vertex A and vertex B
+, it is possible to traverse from B to A, or A to B as there is no specific direction.
+
+Set of vertices (V) – {1, 2, 3, 4}
+
+Set of edges (E) – {(1, 2), (2, 1), (2, 3), (3, 2), (1, 3), (3, 1), (3, 4), (4, 3)}
+
+Dense graph
+=====
+   . is a graph in which the number of edges is close to the maximal number of edges.
+
+ Sparse graph
+ ========
+    . is a graph in which the number of edges is close to the minimal number of edges
+
+    . Sparse graph can be a disconnected graph.

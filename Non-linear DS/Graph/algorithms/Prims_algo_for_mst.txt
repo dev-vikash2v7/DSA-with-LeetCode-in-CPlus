@@ -1,0 +1,8 @@
+Prim’s Algorithm:
+=============
+
+Prim's algorithm to find minimum cost spanning tree (as Kruskal's algorithm) uses the greedy approach. Prim's
+algorithm shares a similarity with the shortest path first algorithms.
+
+Prim's algorithm, in contrast with Kruskal's algorithm, treats the nodes as a single tree and keeps on adding
+new nodes to the spanning tree from the given graph.

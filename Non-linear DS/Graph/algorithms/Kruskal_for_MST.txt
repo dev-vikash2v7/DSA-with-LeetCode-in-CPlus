@@ -1,0 +1,158 @@
+
+How to find MST using Kruskal’s algorithm?
+=======================
+
+Kruskal's algorithm to find the minimum cost spanning tree uses the greedy approach. This algorithm treats
+the graph as a forest and every node it has as an individual tree. A tree connects to another only and only if, it
+has the least cost among all available options and does not violate MST properties. 
+
+
+1. Sort all the edges in increasing order of their weight. 
+2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If the cycle is not formed, include this edge. Else, discard it. 
+Repeat step#2 until there are (V-1) edges in the spanning tree.
+3. Repeat step#2 until there are (V-1) edges in the spanning tree
+
+4. Step #2 uses the Union-Find algorithm to detect cycles. 
+
+
+. Kruskal’s algorithm to find the minimum cost spanning tree uses the greedy approach
+. The Greedy Choice is to pick the smallest weight edge that does not cause a cycle in the MST constructed so far
+. Let us understand it with an example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+The graph contains 9 vertices and 14 edges. So, the minimum spanning tree formed will be having (9 – 1) = 8 edges. 
+
+After sorting:
+Weight   Src    Dest
+1         7      6
+2         8      2
+2         6      5
+4         0      1
+4         2      5
+6         8      6
+7         2      3
+7         7      8
+8         0      7
+8         1      2
+9         3      4
+10        5      4
+11        1      7
+14        3      5
+Now pick all edges one by one from the sorted list of edges 
+Step 1: Pick edge 7-6: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 2:  Pick edge 8-2: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 3: Pick edge 6-5: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 4: Pick edge 0-1: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 5: Pick edge 2-5: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 6: Pick edge 8-6: Since including this edge results in the cycle, discard it.
+Step 7: Pick edge 2-3: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 8: Pick edge 7-8: Since including this edge results in the cycle, discard it.
+Step 9: Pick edge 0-7: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Step 10: Pick edge 1-2: Since including this edge results in the cycle, discard it.
+Step 11: Pick edge 3-4: No cycle is formed, include it. 
+ 
+
+Kruskal’s Minimum Spanning Tree Algorithm
+
+Note: Since the number of edges included in the MST equals to (V – 1), so the algorithm stops here.
+
+
+
+
+
+
+//////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To understand Kruskal's algorithm let us consider the folloǁiŶg eǆaŵple −
+Figure 4.6: Kruskal's Algorithm Example
+Step 1 - Remove all loops and Parallel Edges
+Remove all loops and parallel edges from the given graph.
+In case of parallel edges, keep the one which has the least cost associated and remove all others.
+Step 2 - Arrange all edges in their increasing order of weight
+The next step is to create a set of edges and weight, and arrange them in an ascending order of weightage
+(cost).
+Step 3 - Add the edge which has the least weightage
+Downloaded from be.rgpvnotes.in
+Page no: 8 Follow us on facebook to get real-time updates from RGPV
+Now we start adding edges to the graph beginning from the one which has the least weight. Throughout, we
+shall keep checking that the spanning properties remain intact. In case, by adding one edge, the spanning tree
+property does not hold then we shall consider not to include the edge in the graph.
+The least cost is 2 and edges involved are B,D and D,T. We add them. Adding them does not violate spanning
+tree properties, so we continue to our next edge selection.
+Next cost is 3, aŶd assoĐiated edges aƌe A,C aŶd C,D. We add theŵ agaiŶ −
+Next cost in the table is 4, and we observe that adding it will create a ĐiƌĐuit iŶ the gƌaph. −
+We ignore it. In the process we shall ignore/avoid all edges that create a circuit.
+We observe that edges with cost 5 and 6 also create circuits. We ignore them and move on.
+Downloaded from be.rgpvnotes.in
+Page no: 9 Follow us on facebook to get real-time updates from RGPV
+Now we are left with only one node to be added. Between the two least cost edges available 7 and 8, we shall
+add the edge with cost 7.
+By adding edge S, A we have included all the nodes of the graph and we now have minimum cost spanning
+tree

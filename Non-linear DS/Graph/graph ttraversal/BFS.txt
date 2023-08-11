@@ -1,0 +1,51 @@
+
+The breadth-first search (BFS) 
+============
+
+. algorithm is used to search a tree or graph data structure for a node that meets a set of criteria
+. It starts at the tree’s root or graph and searches/visits all nodes at the current depth level before moving on to the nodes at the next depth level
+. Breadth-first search can be used to solve many problems in graph theory.
+
+
+The only catch here is, that, unlike trees, graphs may contain cycles, so we may come to the same node again.
+To avoid processing a node more than once, we divide the vertices into two categories:
+
+Visited and
+Not visited.
+
+. A boolean visited array is used to mark the visited vertices. 
+. For simplicity, it is assumed that all vertices are reachable from the starting vertex.
+. BFS uses a queue data structure for traversal.
+
+
+Follow the below method to implement BFS traversal.
+====================
+
+. Declare a queue and insert the starting vertex.
+. Initialize a visited array and mark the starting vertex as visited.
+. Follow the below process till the queue becomes empty:
+    . Remove the first vertex of the queue.
+    . Mark that vertex as visited.
+    . Insert all the unvisited neighbors of the vertex into the queue.
+
+
+
+
+
+
+
+Applications of BFS:
+=================
+
+. Shortest Path and Minimum Spanning Tree for unweighted graph: In an unweighted graph, the shortest path is the path with the least number of edges. With Breadth First, we always reach a vertex from a given source using the minimum number of edges. Also, in the case of unweighted graphs, any spanning tree is Minimum Spanning Tree and we can use either Depth or Breadth first traversal for finding a spanning tree. 
+. Peer-to-Peer Networks: In Peer-to-Peer Networks like BitTorrent, Breadth First Search is used to find all neighbor nodes. 
+. Crawlers in Search Engines: Crawlers build an index using Breadth First. The idea is to start from the source page and follow all links from the source and keep doing the same. Depth First Traversal can also be used for crawlers, but the advantage of Breadth First Traversal is, the depth or levels of the built tree can be limited. 
+. Social Networking Websites: In social networks, we can find people within a given distance ‘k’ from a person using Breadth First Search till ‘k’ levels. 
+. GPS Navigation systems: Breadth First Search is used to find all neighboring locations. 
+. Broadcasting in Network: In networks, a broadcasted packet follows Breadth First Search to reach all nodes. 
+. In Garbage Collection: Breadth First Search is used in copying garbage collection using Cheney’s algorithm. Refer this and for details. Breadth First Search is preferred over Depth First Search because of the better locality of reference: 
+. Cycle detection in the undirected graph: In undirected graphs, either Breadth First Search or Depth First Search can be used to detect cycle. We can use BFS to detect cycle in a directed graph also,
+. Ford–Fulkerson algorithm: In the Ford-Fulkerson algorithm, we can either use Breadth First or Depth First Traversal to find the maximum flow. Breadth First Traversal is preferred as it reduces worst-case time complexity to O(VE2). 
+. To test if a graph is Bipartite: We can either use Breadth First or Depth First Traversal. 
+. Path Finding: We can either use Breadth First or Depth First Traversal to find if there is a path between two vertices. 
+. Finding all nodes within one connected component: We can either use Breadth First or Depth First Traversal to find all nodes reachable from a given node.
