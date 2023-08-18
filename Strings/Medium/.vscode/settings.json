@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "queue": "cpp",
+        "xtree": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp",
+        "exception": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "vector": "cpp"
+    }
+}
