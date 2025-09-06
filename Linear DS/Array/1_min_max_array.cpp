@@ -32,6 +32,8 @@ int main()
 {
     long long a[7] = {4, 3, 8, 4, 2, 99, 21};
     int n = 7;
+
+    
     pair<long long, long long> PAIR1 = getMinMax(a, n);
 
     cout << PAIR1.first << endl;

@@ -75,7 +75,7 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
-    cout << kthSmallest(arr, n, k) << endl;
+    cout << '5 th smallest number :' ,  kthSmallest(arr, n, k) << endl;
 
     return 0;
 }
